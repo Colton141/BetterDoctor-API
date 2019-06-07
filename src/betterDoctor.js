@@ -1,5 +1,5 @@
-export class FindABar {
-  getBar(state, name, city) {
+export class BetterDoctor {
+  getBar(name, issue) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
       // let url = `https://api.openbrewerydb.org/breweries/search?query=${bar}`
