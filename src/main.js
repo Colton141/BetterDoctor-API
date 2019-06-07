@@ -22,19 +22,19 @@ $(document).ready(function() {
         $("#output").append(`<h1> `)
 
 
+        promise.then(function(response) {
+
+
+          
+        }, function(error) {
+          $('.showErrors').text(`There was an error processing your request: ${error.message}`);
+        });
+
         //   $("#output").html(`<h1> ${body}</h1>`)
 
       });
 
     });  // call the instance method and pass in user input
-
-    // promise.then(function(response) {
-    //
-    //
-    //
-    // }, function(error) {
-    //   $('.showErrors').text(`There was an error processing your request: ${error.message}`);
-    // });
   });
 
 });
