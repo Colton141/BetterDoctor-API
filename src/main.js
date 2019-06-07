@@ -19,9 +19,10 @@ $(document).ready(function() {
       let text = JSON.parse(response);
       console.log(text);
       $("#output").append(`<h1>Search Results:</h1><br>`);
-      text.meta.data.forEach((doc) => {
+      text.data.forEach((doc) => {
         console.log(doc);
         $("#output").append(`<h1> Name: ${doc.profile.first_name}</h1>`);
+        accepts_new_patients
 
 
 
