@@ -5,7 +5,7 @@ import $ from 'jquery';
 import { BetterDoctor } from './betterDoctor';
 
 $(document).ready(function() {
-  $('#bar').submit(function(event) {
+  $('#doctor').submit(function(event) {
     event.preventDefault();
     let name = $('#name').val();
     let issue = $('#issue').val();
@@ -17,10 +17,11 @@ $(document).ready(function() {
 
     promise.then((response) => {
       let text = JSON.parse(response);
+      console.log(text);
       $("#output").append(`<h1>Search Results:</h1><br>`);
-      text.forEach((doc) => {
+      text.meta.data.forEach((doc) => {
         console.log(doc);
-        $("#output").append(`<h1> Name: ${doc}</h1>`);
+        $("#output").append(`<h1> Name: ${doc.profile.first_name}</h1>`);
 
 
 
