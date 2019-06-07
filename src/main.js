@@ -12,14 +12,16 @@ $(document).ready(function() {
     $('#name').val("");
     $('#issue').val("");
 
-    let betterDoctor = new BetterDoctor();  // create instance of WeatherService class
-    betterDoctor.getBar(name, issue).then((response) => {
+    let betterDoctor = new BetterDoctor();
+    let promise = betterDoctor.getDoctor();
+
+    promise.then((response) => {
       let text = JSON.parse(response);
       $("#output").append(`<h1>Search Results:</h1><br>`);
       text.forEach((doc) => {
         console.log(doc);
         $("#output").append(`<h1> Name: ${doc}</h1>`);
-        $("#output").append(`<h1> `)
+
 
 
         promise.then(function(response) {
