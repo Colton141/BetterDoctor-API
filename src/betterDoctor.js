@@ -22,4 +22,4 @@ export class BetterDoctor {
 
 
 
-API key = 5a84601bf7bac8924dd838cd000d89cc
+// API key = 5a84601bf7bac8924dd838cd000d89cc

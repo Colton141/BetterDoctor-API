@@ -2,7 +2,7 @@ import $ from 'jquery';
 // import 'bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import './styles.css';
-import { BetterDoctor } from './findABar';
+import { BetterDoctor } from './betterDoctor';
 
 $(document).ready(function() {
   $('#bar').submit(function(event) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
         promise.then(function(response) {
 
 
-          
+
         }, function(error) {
           $('.showErrors').text(`There was an error processing your request: ${error.message}`);
         });
