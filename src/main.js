@@ -22,6 +22,9 @@ $(document).ready(function() {
       text.data.forEach((doc) => {
         console.log(doc);
         $("#output").append(`<h1> Name: ${doc.profile.first_name}</h1>`);
+        $("#output").append(`<h1> Name: ${doc.profile.last_name}</h1>`);
+        $("#output").append(`<h1> Name: ${doc.profile.first_name}</h1>`);
+        $("#output").append(`<h1> Name: ${doc.profile.first_name}</h1>`);
         accepts_new_patients
 
 
