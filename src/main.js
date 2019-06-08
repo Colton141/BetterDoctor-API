@@ -23,9 +23,9 @@ $(document).ready(function() {
         console.log(doc);
         $("#output").append(`<h1> Name: ${doc.profile.first_name}</h1>`);
         $("#output").append(`<h1> Name: ${doc.profile.last_name}</h1>`);
+        $("#output").append(`<h1> Name: ${doc.practices[0].accepts_new_patients}</h1>`);
         $("#output").append(`<h1> Name: ${doc.profile.first_name}</h1>`);
-        $("#output").append(`<h1> Name: ${doc.profile.first_name}</h1>`);
-        accepts_new_patients
+
 
 
 
