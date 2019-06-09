@@ -27,7 +27,12 @@ $(document).ready(function() {
         $("#output").append(`<h1> Street Adress: ${doc.practices[0].visit_address.street}</h1>`);
         $("#output").append(`<h1> Phone Number: ${doc.practices[0].phones[0].number}</h1>`);
         $("#output").append(`<h1> Website: ${doc.practices[0].website}</h1>`);
-        $("#output").append(`<h1> Are They Accepting New Patients: ${doc.practices[0].accepts_new_patients}</h1><br></br>`);
+        if (doc.practices[0].accepts_new_patients == true) {
+          $("#output").append(`<h1> Are They Accepting New Patients?: Yes</h1><br></br>`);
+        }
+        if (doc.practices[0].accepts_new_patients == false) {
+          $("#output").append(`<h1> Are They Accepting New Patients?: No</h1><br></br>`);
+        }
 
 
 
