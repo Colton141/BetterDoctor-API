@@ -13,7 +13,7 @@ $(document).ready(function() {
     $('#issue').val("");
 
     let betterDoctor = new BetterDoctor();
-    let promise = betterDoctor.getDoctor();
+    let promise = betterDoctor.getDoctor(issue);
 
     promise.then((response) => {
       let text = JSON.parse(response);
@@ -33,6 +33,7 @@ $(document).ready(function() {
         if (doc.practices[0].accepts_new_patients == false) {
           $("#output").append(`<h1> Are They Accepting New Patients?: No</h1><br></br>`);
         }
+      });
 
 
 
@@ -45,11 +46,10 @@ $(document).ready(function() {
           $('.showErrors').text(`There was an error processing your request: ${error.message}`);
         });
 
-        //   $("#output").html(`<h1> ${body}</h1>`)
 
-      });
 
-    });  // call the instance method and pass in user input
+
+    });
   });
 
 });
