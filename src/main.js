@@ -25,9 +25,9 @@ $(document).ready(function() {
         $("#output").append(`<h1> First Name: ${doc.profile.first_name}</h1>`);
         $("#output").append(`<h1> Last Name: ${doc.profile.last_name}</h1>`);
         $("#output").append(`<h1> Street Adress: ${doc.practices[0].visit_address.street}</h1>`);
-        $("#output").append(`<h1> Phone Number: ${doc.practices[0].phones[0].number}</h1> <br></br>`);
+        $("#output").append(`<h1> Phone Number: ${doc.practices[0].phones[0].number}</h1>`);
         $("#output").append(`<h1> Website: ${doc.practices[0].website}</h1>`);
-        $("#output").append(`<h1> Are They Accepting New Patients: ${doc.practices[0].accepts_new_patients}</h1>`);
+        $("#output").append(`<h1> Are They Accepting New Patients: ${doc.practices[0].accepts_new_patients}</h1><br></br>`);
 
 
 
