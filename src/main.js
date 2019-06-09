@@ -21,10 +21,13 @@ $(document).ready(function() {
       $("#output").append(`<h1>Search Results:</h1><br>`);
       text.data.forEach((doc) => {
         console.log(doc);
-        $("#output").append(`<h1> Name: ${doc.profile.first_name}</h1>`);
-        $("#output").append(`<h1> Name: ${doc.profile.last_name}</h1>`);
-        $("#output").append(`<h1> Name: ${doc.practices[0].accepts_new_patients}</h1>`);
+        $("#output").append(`<h1> Doctor</h1>`);
+        $("#output").append(`<h1> First Name: ${doc.profile.first_name}</h1>`);
+        $("#output").append(`<h1> Last Name: ${doc.profile.last_name}</h1>`);
         $("#output").append(`<h1> Name: ${doc.practices[0].website}</h1>`);
+        $("#output").append(`<h1> Name: ${doc.practices[0].visit_address.street}</h1>`);
+        $("#output").append(`<h1> Name: ${doc.practices[0].phones[0].number}</h1> <br></br>`);
+        $("#output").append(`<h1> Are They Accepting New Patients: ${doc.practices[0].accepts_new_patients}</h1>`);
 
 
 
