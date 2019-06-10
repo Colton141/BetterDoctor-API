@@ -6,6 +6,7 @@ import { BetterDoctor } from './betterDoctor';
 
 $(document).ready(function() {
   $('#doctor').submit(function(event) {
+    $("#output").empty();
     event.preventDefault();
     let name = $('#name').val();
     let issue = $('#issue').val();
@@ -13,11 +14,12 @@ $(document).ready(function() {
     $('#issue').val("");
 
     let betterDoctor = new BetterDoctor();
-    let promise = betterDoctor.getDoctor(issue);
+    let promise = betterDoctor.getDoctor(issue, name);
 
     promise.then((response) => {
       let text = JSON.parse(response);
       console.log(text);
+      if(text.meta.total > 0){
       $("#output").append(`<h1>Search Results:</h1><br>`);
       text.data.forEach((doc) => {
         console.log(doc);
@@ -33,7 +35,9 @@ $(document).ready(function() {
         if (doc.practices[0].accepts_new_patients == false) {
           $("#output").append(`<h1> Are They Accepting New Patients?: No</h1><br></br>`);
         }
+
       });
+    }else $("#output").append(`<h1> No Doctors Found</h1><br></br>`);
 
 
 
